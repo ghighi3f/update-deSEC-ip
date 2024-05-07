@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  bot:
+    container_name: change-deSEC-ip
+    build:
+      context: "./app"
+      dockerfile: Dockerfile
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - DESEC_TOKEN=${DESEC_TOKEN}
+      - DESEC_DOMAIN=${DESEC_DOMAIN}
+    restart: always
