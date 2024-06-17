@@ -85,7 +85,11 @@ if __name__ == '__main__':
     logging.info(f"Current DeSec IP: {deSec_ip}")
     if new_wan_ip != deSec_ip:
       logging.info(f"WAN IP changed to: {new_wan_ip}.  Asking for update...")
-      send_message(new_wan_ip)
+      if deSec_ip:
+        send_message(new_wan_ip)
+      else:
+        url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+        requests.post(url=url, data={"chat_id": CHAT_ID, 'text': f"There was an error with DeSec"}).json() 
 
     else:
       logging.info("No change in WAN IP. No update needed.")

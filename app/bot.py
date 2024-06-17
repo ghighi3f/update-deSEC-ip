@@ -38,6 +38,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
   if is_ipv4_address(query.data):
     await query.edit_message_text(text=f"Updating IP: ~ {query.data} ~ ...")
     setDeSecIp(query.data)
+  else:
+    query.edit_message_text(text=f"Ok, aborting")
 
 
 def setDeSecIp(ip):
