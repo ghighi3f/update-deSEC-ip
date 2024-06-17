@@ -28,3 +28,5 @@ Made to work with docker compose
 ## Documentation
 
 How to get Telegram Bot Token - [Documentation](https://core.telegram.org/bots/tutorial#introduction)
+
+How to get Telegram Chat ID - [Stack Overflow answer](https://stackoverflow.com/a/32572159/10412138)
