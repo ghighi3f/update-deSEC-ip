@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 requests = "*"
 python-telegram-bot = "*"
+tinytuya = "*"
 
 [dev-packages]
 
