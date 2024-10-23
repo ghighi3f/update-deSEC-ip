@@ -13,6 +13,7 @@ logging.basicConfig(
 
 TOKEN = os.environ.get('TELEGRAM_TOKEN')
 CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
+THERMOSTAT_IP = os.environ.get('THERMOSTAT_IP')
 
 def send_message(message):
   url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
@@ -21,7 +22,7 @@ def send_message(message):
 # Connect to Device
 d = tinytuya.OutletDevice(
     dev_id='bfa598511b15f3606aray8',
-    address='192.168.0.103',      # Or set to 'Auto' to auto-discover IP address
+    address=THERMOSTAT_IP,      # Or set to 'Auto' to auto-discover IP address
     local_key='IwL;ntFas:t}:O#+',
     version=3.4,
     persist=True)

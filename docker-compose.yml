@@ -11,4 +11,5 @@ services:
       - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
       - DESEC_TOKEN=${DESEC_TOKEN}
       - DESEC_DOMAIN=${DESEC_DOMAIN}
+      - THERMOSTAT_IP=${THERMOSTAT_IP}
     restart: always
